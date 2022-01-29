@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100;300&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+/*element selector*/
+body{
+	font-family: 'Open Sans', sans-serif;
+	margin:0;
+	padding:0;
+}
+.checkbtn {
+	font-size: 30px;
+	color: black;
+	float: right;
+	line-height: 60px;
+	margin-right: 40px; 
+	cursor: pointer;
+	display: none;
+}
+#check {
+	display: none;
+}
+nav{
+	background-color:rgb(116, 179, 213);
+	height: 60px;
+  width: 100%;
+	position: sticky;
+	top: 0;
+}
+nav ul {
+	float: left;
+	margin-left: 70px;
+}
+nav ul li {
+	display: inline;
+	line-height: 60px;
+	margin: 0 5px;
+	font-weight: bold;
+}
+nav ul li a{
+	color: #fff;
+	font-size: 17px;
+	text-transform: uppercase;
+	padding: 7px 13px;
+	border-radius: 5px;
+}
+a.active, a:hover{
+	background-color: #5cbfd5;
+	color: black;
+	transition: .5s;
+}
+aside{
+	text-align:center;
+	width:20%;
+	float:left;
+}
+/*class selector*/
+.jumbotron{
+	height: 300px;
+	background: rgba(0, 0, 0, 0.467) url(/assets/image/stmik.jpg) center; 
+  background-size: cover;
+	font-size:20px;
+	padding:30px;
+	text-align:center;
+	color:rgba(255, 255, 255, 0.854);
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	text-transform: uppercase;
+}
+.card{
+	border-radius:5px;
+	padding:15px;
+	box-shadow:5px 5px 5px grey;
+	margin-bottom: 30px;
+}
+.content{
+	width:60%;
+	float:left;	
+}
+.text-bold{
+	font-weight:bold;
+}
+.label{
+	background-color:#2f365f;
+	color:#ffffff;
+	padding:5px;
+	border-radius:5px;
+}
+.report {
+	float: left;
+	width: 20%;
+	height: 300px;
+	text-align: center;
+}
+.report img {
+	height: 150px;
+	width: 100%;
+	margin: 5px;
+	padding: 0 10px;
+}
+/*element selector footer*/
+footer{
+	background-color: #cfebe952;
+	padding:20px;
+	color:#000;
+	text-align:center;
+	font-weight: bold;
+}
+main{
+	overflow:auto;
+	padding:15px;
+}
+.feature_img{
+	border-radius:50%;
+	width:160px;
+	height:175px;
+}
+/* ABOUT */
+main {
+	background-color: rgba(235, 228, 228, 0.213);
+}
+.about {
+	margin-top: 25px;
+	text-align: justify;
+}
+.about h2 {
+	margin: 0 20px 20px 35px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.467);
+	padding-bottom: 5px;
+}
+.about p {
+	text-indent: 30px;
+	padding: 0 20px 20px 40px;
+}
+.about img {
+	border-radius: 100px 15px 100px 15px;
+	width: 300px;
+	height: 250px;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+	border: 5px solid black;
+}
+#ti, #si {
+	float: left;
+	width: 70%;
+}
+.si{
+	padding-top: 75px;
+}
+/* GALLERY */
+.gallery {
+	background-color: #d2dbe4cb;
+}
+@keyframes slidy {
+	0% { left: 0%; }
+	20% { left: 0%; }
+	25% { left: -100%; }
+	45% { left: -100%; }
+	50% { left: -200%; }
+	70% { left: -200%; }
+	75% { left: -300%; }
+	95% { left: -300%; }
+	100% { left: -400%; }
+}
+	
+div#slider { 
+	overflow: hidden; 
+}
+div#slider figure img { 
+	width: 25%;	
+	height: 500px; 
+	float: left; 
+	padding: 0 100px;
+	border-radius: 102px;
+}
+div#slider figure { 
+	position: relative;
+	width: 400%;
+	margin: 0;
+	left: 0;
+	text-align: left;
+	font-size: 0;
+	animation: 20s slidy infinite; 	
+}
+/* DOSEN */
+@media (max-width:922px){
+	.content, aside, .report{
+		width:100%;
+	}
+	nav ul li a {
+    font-size: 15px;
+  }
+	#ti, #si {
+		width: 100%;
+	}
+	.cardss {
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		transition: 0.3s;
+		width: 100%;
+	}
+}
+@media (max-width: 650px) {
+	.checkbtn {
+		display: block;
+	}
+	.jumbotron {
+		font-size: 17px;
+		color: rgb(235, 233, 233);
+	}
+	.jumbotron h1 {
+		color: rgba(0, 0, 0, 0.600);
+	}
+	nav ul {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+    background: #2c3e50;
+    left: -130%;
+    text-align: center;
+    transition: all .5s;
+	}
+	nav ul li {
+		display: block;
+		margin: 50px 0px;
+    line-height: 30px;
+		padding-left: 180px;
+	}
+	nav ul li a{
+    font-size: 20px;
+  }
+  a:hover, a.active {
+    background: none;
+    color: #90adc9;
+		font-weight: bold;
+  }
+	#check:checked ~ ul {
+		top:0;
+    left:-50%;
+  }
+	.ti > img, .si > img {
+		float: none;
+		display: block;
+		margin: auto;
+	}
+	.gallery {
+		background: none;
+	}
+	div#slider figure {
+		z-index: -1;
+	}
+	div#slider figure img {
+		padding: 0;
+		border-radius: 50px;
+	}
+	.cards {
+		display: inline;
+	}
+	.cards li {
+		width: 80%;
+		padding: 0;
+		margin-bottom: 50px;
+	}
+}
+
