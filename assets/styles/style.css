@@ -61,7 +61,7 @@ aside{
 /*class selector*/
 .jumbotron{
 	height: 300px;
-	background: rgba(0, 0, 0, 0.467) url(../image/jumbroton.jpeg) center; 
+	background: rgba(0, 0, 0, 0.467) url("https://github.com/zerone3/tas_web_dasar/blob/main/assets/image/jumbroton.jpeg") center; 
   background-size: cover;
 	font-size:20px;
 	padding:30px;
